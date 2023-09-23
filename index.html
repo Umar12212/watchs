@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    
+    <div class="test">
+        <input type="checkbox" id="check">
+        
+        <label for="check">
+            <span class="span"></span>
+        </label>
+    </div>
+    
+    <div class="tabsPanel">
+        <!-- Меню табов -->
+        <ul class="tabsLinks">
+            <li class="tabsItem active"><a href="#" class="tabsLink">Часы</a></li>
+            <li class="tabsItem">
+                <a href="#" class="tabsLink">Секундомер
+                    <!-- span для показа запуска секундомера
+                    Принимает на себя классы работы:
+                    active - Секундомер запущен
+                    active_clear - Секундомер остановлен но данные не сброшены
+                    -->
+                    <span class="tabsLink__span"></span>
+                </a>
+            </li>
+        </ul>
+        <!-- Все табы -->
+        <div class="tabsContent">
+            <!-- Стрелочные часы -->
+            <div class="clock tabsContentItem active">
+                <div class="arrowClock">
+                    <!-- Часы-->
+                    <div class="arrowClockNumber">
+                        <div class="arrowClockNumber__num arrowClockNumber__num_12">12</div>
+                        <div class="arrowClockNumber__arr arrowClockNumber__arr_1"></div>
+                        <div class="arrowClockNumber__arr arrowClockNumber__arr_2"></div>
+                        <div class="arrowClockNumber__num arrowClockNumber__num_3">3</div>
+                        <div class="arrowClockNumber__arr arrowClockNumber__arr_4"></div>
+                        <div class="arrowClockNumber__arr arrowClockNumber__arr_5"></div>
+                        <div class="arrowClockNumber__num arrowClockNumber__num_6">6</div>
+                        <div class="arrowClockNumber__arr arrowClockNumber__arr_7"></div>
+                        <div class="arrowClockNumber__arr arrowClockNumber__arr_8"></div>
+                        <div class="arrowClockNumber__num arrowClockNumber__num_9">9</div>
+                        <div class="arrowClockNumber__arr arrowClockNumber__arr_10"></div>
+                        <div class="arrowClockNumber__arr arrowClockNumber__arr_11"></div>
+                    </div>
+
+                    <!-- Стрелки  -->
+
+                    <div class="s"></div> <!-- Секундная -->
+                    <div class="m"></div> <!-- Минутная -->
+                    <div class="h"></div> <!-- Часовая -->
+                </div>
+                <div class="numberClock">
+                    <!-- Вывод времени в цифрах -->
+                    <div class="hours">00</div>
+                    <div class="minutes">00</div>
+                </div>
+            </div>
+            <!-- Секундомер Д/З -->
+            <!-- 
+
+            Задание:
+                При помощи рекурсии и условий создать секундомер который будет работать без использования new Date()    
+
+             -->
+            <div class="stopwatch tabsContentItem ">
+                <div class="stopwatch__clock">
+
+                    <div class="stopwatch__clock-description">
+                        <!-- Часы -->
+                        <div class="stopwatch__hours">0</div>
+                        Час.
+                    </div>
+                    <div class="stopwatch__clock-description">
+                        <!-- Минуты -->
+                        <div class="stopwatch__minutes">0</div>
+                        Мин.
+                    </div>
+                    <div class="stopwatch__clock-description">
+                        <!-- Секунды -->
+                        <div class="stopwatch__seconds">0</div>
+                        Сек.
+                    </div>
+                </div>
+                <!-- Кнопка запуска секундомера -->
+                <button class="stopwatch__btn">start</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
