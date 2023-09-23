@@ -308,7 +308,6 @@ body {
   left: 2px;
   cursor: pointer;
   transition: 0.4s;
-  z-index: -1;
 }
 #check:checked ~ label .span::before {
   background: yellow;
