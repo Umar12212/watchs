@@ -5,6 +5,9 @@ const sec = document.querySelector(".s");
 const hoursNumber = document.querySelector(".hours");
 const minutesNumber = document.querySelector(".minutes");
 
+const inp = document.querySelector("#check");
+const audio = document.querySelector("audio");
+
 function clock() {
   let time = new Date();
   let second = time.getSeconds() * 6;
@@ -16,6 +19,11 @@ function clock() {
 
   hoursNumber.textContent = time.getHours() < 10 ? "0" + time.getHours() : time.getHours();
   minutesNumber.textContent = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes();
+  if (inp.checked) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
 
   setTimeout(() => {
     clock();
