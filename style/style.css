@@ -307,8 +307,9 @@ body {
   top: 2px;
   left: 2px;
   cursor: pointer;
+  transition: .4s;
 }
-#check:checked ~ label .spanm::before {
+#check:checked ~ label .span::before {
   background: yellow;
   left: 30px;
 }
